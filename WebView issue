@@ -1,0 +1,226 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+class TenderDetailsScreenTest extends StatefulWidget {
+  @override
+  _TenderDetailsScreenTestState createState() =>
+      _TenderDetailsScreenTestState();
+}
+
+class _TenderDetailsScreenTestState extends State<TenderDetailsScreenTest>
+    with TickerProviderStateMixin {
+  final Map<String, dynamic> dataMap = {
+    "id": 2317,
+    "title": "Provision of Several Supplies, Services & Works under Long Terms Agreements"
+        " (\u0627\u062a\u0641\u0627\u0642\u064a\u0627\u062a \u0645\u062a\u0639\u062f\u062f\u0629 "
+        "\u0637\u0648\u064a\u0644\u0629 \u0627\u0644\u0627\u062c\u0644 \u062a\u0648\u0631\u064a\u062f "
+        "\u2013 \u062e\u062f\u0645\u0627\u062a \u2013 \u0627\u0639\u0645\u0627\u0644 )",
+    "description": """<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<p style="text-align:center"><span style="font-size:20px"><strong><span style="font-family:Georgia,serif"><span style="background-color:#ffd700">ملاحظة: تم تمديد المناقصة الى تاريخ 26 اكتوبر 2020</span></span></strong></span></p> <p style="text-align:center"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>Long Terms Agreements Advertisement</strong></span></span></p> <p><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>Office</strong>: Norwegian Refugee Council (NRC)</span></span></p> <p><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>Bids Issue Timetable</strong>: 28<sup>th</sup> September, 2020.</span></span></p> <p><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>Deadline for Submission</strong>: 26<sup>th</sup> Oct, 2020, time: before 03:00 PM</span></span></p> <p><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>Tenders Subject: </strong><strong>Provision of Several Supplies, Services &amp; Works under Long Terms Agreements (Valid for One Year &ndash; Renewable for Two Individual years) </strong></span></span></p> <p><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><u>Introduction</u></strong><strong>:</strong></span></span></p> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">The Norwegian Refugee Council (NRC) is an International NGO with regional competence and expertise in working with displaced populations. The Regional Office is based in Nairobi, Kenya with Offices and operations in Somalia and Yemen.</span></span></p> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">Norwegian Refugee Council invites potential suppliers/contractors to apply to the following LTAs:</span></span></p> <table border="0" cellpadding="5" cellspacing="5" style="width:100%"> <tbody> <tr> <td style="height:26px; width:114px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong><u>Reference Number</u></strong></span></span></p> </td> <td style="height:26px; width:300px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong><u>LTA Description</u></strong></span></span></p> </td> <td style="height:26px; width:96px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong><u>Bank Guarantee</u></strong></span></span></p> </td> <td style="height:26px; width:126px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong><u>Documents</u></strong></span></span></p> </td> </tr> <tr> <td style="height:20px; width:114px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">NRC/YE/21/009</span></span></p> </td> <td style="height:20px; width:300px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">Supplying Office Supplies Items (buffet items)</span></span></p> </td> <td style="height:20px; width:96px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">N/A</span></span></p> </td> <td style="height:20px; width:126px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><a href="https://norwegianrefugeecouncil-my.sharepoint.com/:b:/g/personal/bassam_alsharjabie_nrc_no/EaUS2ThrRFFKvzYdeeCchpoBAME_C5bj35l6hzp7wcW8Mw?e=KzkWIR">Download</a></span></span></p> </td> </tr> <tr> <td style="height:20px; width:114px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">NRC/YE/21/012</span></span></p> </td> <td style="height:20px; width:300px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">Supplying Scholastics Kit Items</span></span></p> </td> <td style="height:20px; width:96px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">USD 5,000</span></span></p> </td> <td style="height:20px; width:126px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><a href="https://norwegianrefugeecouncil-my.sharepoint.com/:b:/g/personal/bassam_alsharjabie_nrc_no/EcTWrL5fp7lLpiKQcVeJ8F0BJ7q7O_FqZOq6eOztLGjkTw?e=HAyjBd">Download</a></span></span></p> </td> </tr> <tr> <td style="height:20px; width:114px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">NRC/YE/21/016</span></span></p> </td> <td style="height:20px; width:300px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">Provision of Legal Consultancy Services</span></span></p> </td> <td style="height:20px; width:96px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px">N/A</span></span></p> </td> <td style="height:20px; width:126px"> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><a href="https://norwegianrefugeecouncil-my.sharepoint.com/:b:/g/personal/bassam_alsharjabie_nrc_no/Ec2-u0XFjCtEqpkfd15LBI0Br2zht1Aqh43GHoWzeytE9g?e=IsCCDm">Download</a></span></span></p> </td> </tr> </tbody> </table> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong><u>Manner of</u></strong><strong><u> Submission:</u></strong></span></span></p> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong>Followings must be considered by all interested bidders:</strong></span></span></p> <ol> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Interested bidders are requested to download the LTA documents from links above against each LTA.</span></span></li> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Any request for clarification must be received by NRC in writing to <a href="mailto:ye.procurement@nrc.no">ye.procurement@nrc.no</a> at least 5 working days before the deadline for submission of tenders. NRC will reply to bidders&#39; questions at least 2 working days before the deadline for submission of tenders. </span></span></li> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Tender must be submitted in sealed envelopes and indicate the reference number and location in the envelop cover. We look forward to receiving your tender sealed envelops as follwos (Financial offer &ndash; Technical offer - and the accompanying tender bank guarantee as per the above table.</span></span></li> </ol> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong><u>Offers should clearly include the following</u></strong><strong>:</strong></span></span></p> <ol> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Company Valid commercial local registration, TAX card, and Zakat card.</span></span></li> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Documented experience &amp; references from other similar transactions, companies, NGO&rsquo;s, and UN agencies (Technical offer).<br /> Validity of the submitted offer and to indicate implementation period in your respected offer.</span></span></li> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Net price for each item (Financial offer).</span></span></li> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Interested bidders must have a physical participation in Yemen under the company name. </span></span></li> <li><span style="font-family:Georgia,serif"><span style="font-size:18px">Bank guarantee (if required) with value mentioned in above table valid for three months as willingness proof to participate to NRC LTAs (To be submitted separately out of the financial &amp; technical sealed envelopes).</span></span></li> </ol> <p><span style="font-family:Georgia,serif"><span style="font-size:18px"><strong>Bids should be submitted in a physical sealed envelope as stated above to the Norwegian Refugee Council Offices in&nbsp;Yemen by Date <span dir="RTL">26</span><sup>th</sup> Oct,&nbsp;2020&nbsp;Before 03:00 pm (Late bids will not be considered)</strong></span></span></p> <hr /> <p dir="rtl" style="text-align:center"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><span dir="RTL">اعـــــــلان</span></strong><strong><span dir="RTL"> اتفاقيات شراء عامة </span></strong>&nbsp;</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>المكان:&nbsp;</strong>المجلس النرويجي للاجئين</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>موعد اصدار المناقصة:&nbsp;</strong>من تاريخ <span dir="LTR">28</span> سبتمبر - 2020</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>أخر موعد لتقديم العطاءات:&nbsp;</strong>إلى تاريخ 26 - اكتوبر -2020<strong>&nbsp;, السا</strong>عة 03:00 مساءً</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>موضوع المناقصة:&nbsp;</strong><strong>اتفاقيات متعددة طويلة الاجل &nbsp;( توريد &ndash; خدمات &ndash; اعمال ) لمدة سنة واحدة &ndash; قابلة للتمديد لعاميين بشكل فردي.</strong></span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><u><span dir="RTL">مــقــدمــة</span></u></strong></span></span></p> <p dir="rtl"><span style="font-size:18px"><span style="font-family:Georgia,serif"><span dir="RTL">هــي منظـــمة دوليـــة غير </span><span dir="RTL">حكوميـــة </span>(NRC) <span dir="RTL">المجلــــس النرويجــــي للاجئيــــن</span></span></span></p> <p dir="rtl"><span style="font-size:18px"><span style="font-family:Georgia,serif"><span dir="RTL">ذات الاختصــاص والخبـــرة الإقليميـــة في العمـــل مع السكــــان و النـــازحيـــن. ويقـــع المكتب الإقليمـــي فــي نيروبـــي، كينيـــا مع مكـــاتب العمليــات في الصومـــال، كينيــــا، إثيوبيـــا واليمــــن.</span></span></span></p> <p dir="rtl"><span style="font-size:18px"><span style="font-family:Georgia,serif"><span dir="RTL">يدعوا المجلس النرويجي للاجئين التجار والمقاولين الراغبين في التقديم للاتفاقيات التالية : </span></span></span></p> <table border="0" cellpadding="5" cellspacing="5" style="width:100%"> <tbody> <tr> <td style="height:26px; width:108px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><span dir="RTL">المرجع</span></strong></span></span></p> </td> <td style="height:26px; width:246px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>وصف الاتفاقية</strong></span></span></p> </td> <td style="height:26px; width:138px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>الضمان</strong></span></span></p> </td> <td style="height:26px; width:139px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong>المستندات</strong></span></span></p> </td> </tr> <tr> <td style="height:20px; width:108px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">NRC/YE/21/009</span></span></p> </td> <td style="height:20px; width:246px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">توريد مواد للمكتب (احتياجيات البوفية)</span></span></p> </td> <td style="height:20px; width:138px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">N/A</span></span></p> </td> <td style="height:20px; width:139px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><a href="https://norwegianrefugeecouncil-my.sharepoint.com/:b:/g/personal/bassam_alsharjabie_nrc_no/EaUS2ThrRFFKvzYdeeCchpoBAME_C5bj35l6hzp7wcW8Mw?e=KzkWIR">تحميل</a></span></span></p> </td> </tr> <tr> <td style="height:20px; width:108px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">NRC/YE/21/012</span></span></p> </td> <td style="height:20px; width:246px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">توريد مستلزمات مدرسية</span></span></p> </td> <td style="height:20px; width:138px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">USD 5,000</span></span></p> </td> <td style="height:20px; width:139px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><a href="https://norwegianrefugeecouncil-my.sharepoint.com/:b:/g/personal/bassam_alsharjabie_nrc_no/EcTWrL5fp7lLpiKQcVeJ8F0BJ7q7O_FqZOq6eOztLGjkTw?e=HAyjBd">تحميل</a></span></span></p> </td> </tr> <tr> <td style="height:20px; width:108px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">NRC/YE/21/016</span></span></p> </td> <td style="height:20px; width:246px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">تقديم خدمة الاستشارات القانونية</span></span></p> </td> <td style="height:20px; width:138px"> <p style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif">N/A</span></span></p> </td> <td style="height:20px; width:139px"> <p dir="RTL" style="text-align: center;"><span style="font-size:18px"><span style="font-family:Georgia,serif"><a href="https://norwegianrefugeecouncil-my.sharepoint.com/:b:/g/personal/bassam_alsharjabie_nrc_no/Ec2-u0XFjCtEqpkfd15LBI0Br2zht1Aqh43GHoWzeytE9g?e=IsCCDm">تحميل</a></span></span></p> </td> </tr> </tbody> </table> <p dir="rtl" style="text-align:center"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><span style="background-color:#ffd700">يمكن لجميع الموردين تحميل الملفات المرفقة بالضغط على الرابط المقابل لكل طلب، أو تنزيل جميع الملفات من يمين هذه الصفحة تحت قسم &quot;Downloads &amp; Attachments &quot; </span></strong></span></span></p> <p dir="rtl"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><span dir="RTL">طريقــــــة التقـــــــديم</span></strong></span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">يجب عــلى الراغبيــــن&nbsp; في التقديم الاتي:</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">1:على الموردين الراغبين في المشاركة &nbsp;تحميل ملفات الاتفاقيات من روابط التحميل في الجدول اعلاة مقابل كل اتفاقية &nbsp;.</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">2: لاي استفسارات او توضيحات يجب ان تسلم الى المجلس النرويجي للاجئين عن طريق ارسال بريد الكتروني خطي الى <a href="mailto:ye.procurement@nrc.no"><strong><span dir="LTR">ye.procurement@nrc.no</span></strong></a>&nbsp;</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">على الاقل قبل موعد تسليم&nbsp; وثائق المناقصة بخمسة ايام&nbsp; وسيقوم المجلس النرويجي للاجئيين بالاجابة على اسئلة مقدمي العروض على الاقل بيومين عمل من موعد تسليم وثائق المناقصة.</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">3: يجيب تقديم العطاء في مظاريف مختومة مع ذكر الرقم المرجعي والموقع في غلاف الظرف نحن نتطلع الى استلام مظاريف العطاء المختومة على النحو الاتي: ( عرض مالي &ndash; عرض فني &ndash; وضمان بنك العطاء المصاحب كما هو موضح في الجدول اعلاة).</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">&nbsp;4: تم اخذ اجازة عيد الاضحى في الاعتبار خلال فترة الاعلان.</span></span></p> <p dir="rtl"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><span dir="RTL">وينبغــــي أن تشمـــــل العـــــروض بوضـــــوح ما يلـــــي</span>:</strong></span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">-&nbsp; سجـــل الشركــــة التجـــاري المحلي, والبطاقه الضريبيه والبطاقة الزكوية ساريات المفعول.</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">-&nbsp; &nbsp;الخبرة والمراجع الموثقة من المعاملات المماثلة ، والشركات ، والمنظمات غير الحكومية ، ووكالات الأمم المتحدة( تضاف ضمن العطاء الفني).</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">- &nbsp;السعر الصافي لكل عنصر (عرض مالي).</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">-&nbsp; &nbsp;على المتقدمين &nbsp;المهتمين بالمشاركة الفعلية ان يكونوا متواجدين في اليمن تحت اسم الشركة المقدم العرض باسمها.</span></span></p> <p dir="RTL"><span style="font-size:18px"><span style="font-family:Georgia,serif">- ضمان بنكي (اذا كان مطلوب) بالقيمة المحددة في الجدول اعلاة صالح لمدة ثلاثة شهور كدليل على الاستعداد للمشاركة في اتفاقيات المجلس النرويجي &nbsp;يتم تقديمه بشكل منفصل خارج الأظرف المالية والفنية المختومة).</span></span></p> <p dir="rtl"><span style="font-size:18px"><span style="font-family:Georgia,serif"><strong><span dir="RTL">يجب تقديم العطاءات في مظروف مغلق فعليًا كما هو مذكور أعلاه إلى مكاتب مجلس اللاجئين النرويجي في اليمن بتاريخ 26&nbsp;اكتوبر 2020 قبل الساعة 03:00 مساءً (لن يتم النظر في العطاءات المتأخرة)</span></strong></span></span></p>
+<script type="application/javascript">
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var body = document.body,
+        html = document.documentElement;
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'flutter://webview?height='+height);
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+xhr.send(encodeURI('height=' + height));
+})
+</script>
+</body>
+</html>""",
+  };
+  TabController tenderDetailsTabController;
+
+
+  @override
+  void initState() {
+    super.initState();
+    tenderDetailsTabController = new TabController(vsync: this, length: 2);
+  }
+
+  @override
+  void dispose() {
+    tenderDetailsTabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: CustomScrollView(
+        scrollDirection: Axis.vertical,
+        slivers: <Widget>[
+          SliverAppBar(
+            leading: BackButton(
+              color: Colors.white,
+              onPressed: () {
+                if (Navigator.canPop(context)) {
+                  Navigator.pop(context);
+                }
+              },
+            ),
+            title: Container(
+                child: Text(
+              "Tender View",
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(color: Colors.white, fontSize: 18.0),
+              strutStyle: StrutStyle(
+                height: 1.9,
+                forceStrutHeight: true,
+              ),
+            )),
+            bottom: TabBar(
+              controller: tenderDetailsTabController,
+              tabs: <Tab>[
+                Tab(
+                  text: "THE TENDER",
+                ),
+                Tab(
+                  text: "ATTACHMENTS",
+                )
+              ],
+            ),
+            floating: true,
+            pinned: true,
+            snap: true,
+            expandedHeight: 100,
+          ),
+          SliverFillRemaining(
+              child: TabBarView(
+            controller: tenderDetailsTabController,
+            children: [
+              descriptionWidgets(
+                context: context,
+                index: 0,
+                dataMap: dataMap,
+                tabController: tenderDetailsTabController,
+                isInBookmarkList: false,
+              ),
+              Container(
+                height: 200,
+                margin: EdgeInsets.all(5),
+                color: Colors.blueGrey,
+              ),
+            ],
+          )),
+        ],
+      ),
+    );
+  }
+}
+
+Widget descriptionWidgets({
+  @required context,
+  @required dataMap,
+  @required tabController,
+  @required index,
+  @required bool isInBookmarkList,
+}) {
+   String htmlWithJS = dataMap["description"];
+
+  return Padding(
+    padding: EdgeInsets.only(top: 5),
+    child: MediaQuery.removePadding(
+      context: context,
+      removeTop: true,
+      child: CustomScrollView(
+        scrollDirection: Axis.vertical,
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Card(
+                  child: Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      width:  MediaQuery.of(context).size.width,
+                      child: Text(
+                        dataMap["title"],
+                        style: Theme.of(context)
+                            .primaryTextTheme
+                            .headline6
+                            .copyWith(
+                              color: Colors.black,
+                              fontSize: 25,
+                              fontWeight: FontWeight.w800,
+                            ),
+                        textAlign: TextAlign.start,
+                        strutStyle: StrutStyle(
+                          height: 2.4,
+                          forceStrutHeight: true,
+                        ),
+                        overflow: TextOverflow.clip,
+                      ),
+                    ),
+                    Container(
+//                    margin: EdgeInsets.only(bottom: 10),
+                      margin: EdgeInsets.only(
+                          right: 10, left: 10, top: 7, bottom: 7),
+                      child: Text(
+                          "Deadline : " + "26 October 2020",
+                          style: TextStyle(
+                            color: Colors.pink,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                          )),
+                    ),
+                  ],
+                ),
+              ))
+            ]),
+          ),
+          SliverFillRemaining(
+            child: Card(
+                child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    width: double.infinity,
+                    child: WebView(
+                      initialUrl: Uri.dataFromString(htmlWithJS,
+                              mimeType: 'text/html',
+                              encoding: Encoding.getByName('utf-8'))
+                          .toString(),
+                      javascriptMode: JavascriptMode.unrestricted,
+                    ))),
+          ),
+
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Card(
+                child: Container(
+                  height: 200,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.indigo,
+                ),
+              ),
+              Card(
+                child: Container(
+                  height: 200,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amberAccent,
+                ),
+              )
+            ]),
+          )
+        ],
+      ),
+    ),
+  );
+}
